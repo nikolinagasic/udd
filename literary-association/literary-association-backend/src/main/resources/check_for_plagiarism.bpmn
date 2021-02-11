@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_0ofvkpw" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.4.0">
+  <bpmn:process id="Check_For_Plagiarism" name="Check For Plagiarism" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_09gx1xo</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_09gx1xo" sourceRef="StartEvent_1" targetRef="Plagiarism_Book_Form" />
+    <bpmn:userTask id="Plagiarism_Book_Form" name="Plagiarism Book Form" camunda:assignee="${writer}">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="originalTitle" label="Title of the original book" type="string">
+            <camunda:properties>
+              <camunda:property id="placeholder" value="Enter title" />
+            </camunda:properties>
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="originalAuthor" label="Author of the original book" type="string">
+            <camunda:properties>
+              <camunda:property id="placeholder" value="Enter author&#39;s name" />
+            </camunda:properties>
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="plagiatTitle" label="Title of the plagiat book" type="string">
+            <camunda:properties>
+              <camunda:property id="placeholder" value="Enter title" />
+            </camunda:properties>
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+          <camunda:formField id="plagiatAuthor" label="Author of plagiat book" type="string">
+            <camunda:properties>
+              <camunda:property id="placeholder" value="Enter author&#39;s name" />
+            </camunda:properties>
+            <camunda:validation>
+              <camunda:constraint name="required" config="true" />
+            </camunda:validation>
+          </camunda:formField>
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_09gx1xo</bpmn:incoming>
+      <bpmn:outgoing>Flow_1ugcm3g</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:endEvent id="Event_00o20zb">
+      <bpmn:incoming>Flow_1ugcm3g</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1ugcm3g" sourceRef="Plagiarism_Book_Form" targetRef="Event_00o20zb" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Check_For_Plagiarism">
+      <bpmndi:BPMNEdge id="Flow_09gx1xo_di" bpmnElement="Flow_09gx1xo">
+        <di:waypoint x="198" y="120" />
+        <di:waypoint x="270" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1ugcm3g_di" bpmnElement="Flow_1ugcm3g">
+        <di:waypoint x="370" y="120" />
+        <di:waypoint x="442" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="Activity_13oi1iv_di" bpmnElement="Plagiarism_Book_Form">
+        <dc:Bounds x="270" y="80" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="162" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_00o20zb_di" bpmnElement="Event_00o20zb">
+        <dc:Bounds x="442" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

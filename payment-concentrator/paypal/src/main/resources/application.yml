@@ -1,0 +1,15 @@
+#server:
+#  port: 8082
+#  ssl:
+#    enabled: true
+#    key-store: classpath:paypal-ms.jks
+#    key-store-password: 123456
+#    key-alias: paypal-ms
+#    key-store-type: JKS
+#    key-store-provider: SUN
+#    trust-store: classpath:paypal-ms.jks
+#    trust-store-password: 123456
+#    trust-store-type: JKS
+#
+#  http:
+#    port: 8079

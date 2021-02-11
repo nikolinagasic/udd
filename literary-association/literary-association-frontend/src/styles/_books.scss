@@ -1,0 +1,51 @@
+.books-preview {
+  img {
+    width: 50%;
+  }
+
+  .card {
+    margin: 1rem;
+    max-width: 300px;
+  }
+}
+
+.modal-dialog {
+  margin-left: 500px;
+}
+
+.modal-content {
+  height: 650px;
+  width: auto;
+
+  .modal-body {
+    height: 650px;
+    width: auto;
+
+    .card {
+      height: 580px;
+      width: 800px;
+
+      .book-synopsys {
+        height: 190px;
+        overflow-y: scroll;
+      }
+
+      .add-remove-button {
+        padding: 0;
+
+        i {
+          font-size: 14px;
+        }
+      }
+
+      .cart-button {
+        font-size: 14px;
+        max-width: 160px;
+
+        i {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}

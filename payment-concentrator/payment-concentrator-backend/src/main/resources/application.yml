@@ -1,0 +1,12 @@
+server:
+  port: 8081
+  ssl:
+    enabled: true
+    key-store: classpath:gateway-ms.jks
+    key-store-password: 123456
+    key-alias: gateway-ms
+    key-store-type: JKS
+    key-store-provider: SUN
+    trust-store: classpath:gateway-ms.jks
+    trust-store-password: 123456
+    trust-store-type: JKS

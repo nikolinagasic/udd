@@ -1,0 +1,45 @@
+.preview-comments {
+  .modal-content {
+    width: 700px;
+
+    .modal-body {
+      width: 690px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+.preview-pdf {
+  .modal-content {
+    width: 800px;
+    height: 80vh;
+
+    .modal-body {
+      width: 790px;
+      overflow-y: scroll;
+
+      .center-document {
+        text-align: -webkit-center;
+
+        .controls-center {
+          place-content: center;
+
+          i {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.documents-comments {
+  .modal-content {
+    width: 700px;
+
+    .modal-body {
+      width: 690px;
+      overflow-y: scroll;
+    }
+  }
+}

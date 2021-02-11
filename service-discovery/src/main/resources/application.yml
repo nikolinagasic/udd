@@ -1,0 +1,19 @@
+eureka:
+  instance:
+    nonSecurePortEnabled: false
+    securePortEnabled: true
+    statusPageUrl: 'https://${eureka.instance.hostName}:${server.port}/info'
+    healthCheckUrl: 'https://${eureka.instance.hostName}:${server.port}/health'
+    homePageUrl: 'https://${eureka.instance.hostName}:${server.port}/'
+#
+#server:
+#  ssl:
+#    enabled: true
+#    key-store: classpath:gateway-ms.jks
+#    key-store-password: 123456
+#    key-alias: gateway-ms
+#    key-store-type: JKS
+#    key-store-provider: SUN
+#    trust-store: classpath:gateway-ms.jks,
+#    trust-store-password: 123456
+#    trust-store-type: JKS

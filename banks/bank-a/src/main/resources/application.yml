@@ -1,0 +1,12 @@
+server:
+  port: 8084
+  ssl:
+    enabled: true
+    key-store: classpath:bank-a-ms.jks
+    key-store-password: 123456
+    key-alias: bank-a-ms
+    key-store-type: JKS
+    key-store-provider: SUN
+    trust-store: classpath:bank-a-ms.jks
+    trust-store-password: 123456
+    trust-store-type: JKS

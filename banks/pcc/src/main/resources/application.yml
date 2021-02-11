@@ -1,0 +1,12 @@
+server:
+  port: 8086
+  ssl:
+    enabled: true
+    key-store: classpath:pcc-ms.jks
+    key-store-password: 123456
+    key-alias: pcc-ms
+    key-store-type: JKS
+    key-store-provider: SUN
+    trust-store: classpath:pcc-ms.jks
+    trust-store-password: 123456
+    trust-store-type: JKS

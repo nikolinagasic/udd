@@ -1,0 +1,59 @@
+html {
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+
+    .container-fluid {
+      text-align: -webkit-center;
+
+      .content {
+        .custom-form {
+          color: white;
+        }
+
+        a {
+          color: #bbc0c4;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.adjust-carousel {
+
+  .carousel-caption {
+    border: 2px white solid;
+    background-color: #212529;
+    margin-bottom: 2rem;
+  }
+
+  img {
+    opacity: 0.9;
+  }
+}
+
+.confirmation {
+  .modal-content {
+    width: 500px;
+    height: fit-content;
+
+    .modal-body {
+      height: fit-content;
+
+    }
+  }
+}
+
+.border-danger {
+  border-width: 3px !important;
+}
